@@ -1,4 +1,3 @@
-
 # 📚 Book Recommender System Using LLMs and Vector Search
 
 An **intelligent book recommendation system** leveraging Large Language Models, vector embeddings, and an interactive UI for semantic search and personalized book discovery.
@@ -43,10 +42,11 @@ It integrates:
 
 ## Dataset
 
+- Original dataset: [Goodreads Books Dataset on Kaggle](https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks)
 - `books_cleaned.csv` → Original metadata (title, authors, ISBN, ratings, publisher, etc.)
-- `books_with_descriptions.csv` → LLM-generated book descriptions.
-- `books_with_thumbnails.csv` → Added book cover thumbnails from Google Books API.
-- `final_books_df.csv` → Final merged dataset for search.
+- `books_with_descriptions.csv` → LLM-generated book descriptions
+- `books_with_thumbnails.csv` → Book cover thumbnails via Google Books API ([available on my Kaggle](https://www.kaggle.com/datasets/aminemammarelhadj/cleaned-books-data-set))
+- `final_books_df.csv` → Final merged dataset ready for search
 
 **Metadata Schema:**
 | Column | Description |
@@ -95,9 +95,9 @@ pip install -r requirements.txt
 python interface.py
 ```
 
-* Open your browser at `http://localhost:7860`.
-* Enter a query like `"fantasy books with magic"` and click **Find Books**.
-* Recommended books will appear in a gallery with thumbnails and metadata.
+* Open your browser at `http://localhost:7860`
+* Enter a query like `"fantasy books with magic"` and click **Find Books**
+* Recommended books will appear in a gallery with thumbnails and metadata
 
 ### Example: Search Pipeline
 
@@ -129,27 +129,27 @@ print(results_df)
 
 ## Future Improvements
 
-* Parallelize description generation for speed.
-* Add caching for API calls.
-* Implement collaborative filtering alongside content-based recommendations.
-* Advanced filtering: language, rating, publication date.
-* Mobile-responsive interface.
-* Scalability: distributed embedding computation, database partitioning, load balancing.
+* Parallelize description generation for speed
+* Add caching for API calls
+* Implement collaborative filtering alongside content-based recommendations
+* Advanced filtering: language, rating, publication date
+* Mobile-responsive interface
+* Scalability: distributed embedding computation, database partitioning, load balancing
 
 ---
 
 ## Notes
 
-* The **vector database (`content/books_chroma_db`)** is **not included** in this GitHub repository due to size and privacy.
-* To regenerate embeddings locally, run `05_vectorize_books.py` after preparing the dataset.
-* You can add `content/books_chroma_db` to `.gitignore` to prevent accidentally committing it.
+* The **vector database (`content/books_chroma_db`)** is **not included** in this GitHub repository due to size and privacy
+* To regenerate embeddings locally, run `05_vectorize_books.py` after preparing the dataset
+* Add `content/books_chroma_db` to `.gitignore` to prevent accidentally committing it
 
 ---
 
 ## Author
 
 **Mohamed Amine Mammar El Hadj**
-Deep Learning Developer & Software Developer with experience in vector search and AI applications.
+Deep Learning Developer & Software Developer with experience in vector search and AI applications
 
 * [LinkedIn](https://www.linkedin.com/in/mohamed-amine-mammar-el-hadj-715a41295)
 * [GitHub](https://github.com/mimine47)
@@ -167,7 +167,5 @@ Deep Learning Developer & Software Developer with experience in vector search an
 
 ```
 
----
-
-
+Do you want me to do that?
 ```
