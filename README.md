@@ -1,6 +1,4 @@
 
-
-````markdown
 # 📚 Book Recommender System Using LLMs and Vector Search
 
 An **intelligent book recommendation system** leveraging Large Language Models, vector embeddings, and an interactive UI for semantic search and personalized book discovery.
@@ -15,6 +13,7 @@ An **intelligent book recommendation system** leveraging Large Language Models, 
 - [Usage](#usage)
 - [Code Structure](#code-structure)
 - [Future Improvements](#future-improvements)
+- [Notes](#notes)
 - [Author](#author)
 - [References](#references)
 
@@ -114,15 +113,17 @@ print(results_df)
 
 ## Code Structure
 
-| Script                     | Purpose                                                     |
-| -------------------------- | ----------------------------------------------------------- |
-| `generate_descriptions.py` | LLM-based description generation with Falcon-7B-Instruct    |
-| `merge_metadata.py`        | Merge original book metadata with generated descriptions    |
-| `chunk_text.py`            | Split descriptions into overlapping chunks for embeddings   |
-| `create_vector_db.py`      | Generate embeddings and persist vector database with Chroma |
-| `fetch_thumbnails.py`      | Download book cover thumbnails via Google Books API         |
-| `search_pipeline.py`       | Combines vector search with metadata lookup                 |
-| `interface.py`             | Interactive Gradio frontend for recommendations             |
+| Script                        | Purpose                                                     |
+| ----------------------------- | ----------------------------------------------------------- |
+| `01_prepare_books.py`         | Clean and preprocess the original book dataset              |
+| `02_generate_descriptions.py` | LLM-based description generation with Falcon-7B-Instruct    |
+| `03_merge_metadata.py`        | Merge original book metadata with generated descriptions    |
+| `04_fetch_thumbnails.py`      | Download book cover thumbnails via Google Books API         |
+| `05_vectorize_books.py`       | Generate embeddings and persist vector database with Chroma |
+| `06_test_vector_search.py`    | Test semantic search and validate embeddings                |
+| `07_search_pipeline.py`       | Combines vector search with metadata lookup                 |
+| `08_gradio_app.py`            | Interactive Gradio frontend for recommendations             |
+| `book_recommender_docs.pdf`   | Project documentation and guides                            |
 
 ---
 
@@ -130,17 +131,24 @@ print(results_df)
 
 * Parallelize description generation for speed.
 * Add caching for API calls.
-* Implement collaborative filtering with content-based recommendations.
+* Implement collaborative filtering alongside content-based recommendations.
 * Advanced filtering: language, rating, publication date.
 * Mobile-responsive interface.
 * Scalability: distributed embedding computation, database partitioning, load balancing.
 
 ---
 
+## Notes
+
+* The **vector database (`content/books_chroma_db`)** is **not included** in this GitHub repository due to size and privacy.
+* To regenerate embeddings locally, run `05_vectorize_books.py` after preparing the dataset.
+* You can add `content/books_chroma_db` to `.gitignore` to prevent accidentally committing it.
+
+---
+
 ## Author
 
 **Mohamed Amine Mammar El Hadj**
-
 Deep Learning Developer & Software Developer with experience in vector search and AI applications.
 
 * [LinkedIn](https://www.linkedin.com/in/mohamed-amine-mammar-el-hadj-715a41295)
@@ -157,9 +165,10 @@ Deep Learning Developer & Software Developer with experience in vector search an
 4. Chroma: Open-source embedding database documentation
 5. Google Books API Documentation, Google Developers
 
----
-
 ```
 
 ---
 
+
+Do you want me to do that?
+```
