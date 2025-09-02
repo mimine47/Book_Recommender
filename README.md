@@ -170,5 +170,4 @@ Deep Learning Developer & Software Developer with experience in vector search an
 ---
 
 
-Do you want me to do that?
 ```
