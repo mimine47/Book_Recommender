@@ -165,7 +165,4 @@ Deep Learning Developer & Software Developer with experience in vector search an
 4. Chroma: Open-source embedding database documentation
 5. Google Books API Documentation, Google Developers
 
-```
 
-Do you want me to do that?
-```
