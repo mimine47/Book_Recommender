@@ -149,7 +149,7 @@ print(results_df)
 ## Author
 
 **Mohamed Amine Mammar El Hadj**
-Deep Learning Developer & Software Developer with experience in vector search and AI applications
+Deep Learning & Machine Learning Developer”& Software Developer with experience in vector search and AI applications
 
 * [LinkedIn](https://www.linkedin.com/in/mohamed-amine-mammar-el-hadj-715a41295)
 * [GitHub](https://github.com/mimine47)
